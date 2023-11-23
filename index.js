@@ -15,16 +15,14 @@ app.listen(PORT, () => {
 
 
 await client.connect();
-const db = client.db("enem_questions").collection("questions");
+/* const db = client.db("enem_questions").collection("questions");
 
 const questions = await db.aggregate([{ $sample: { size: 10 } }]).toArray();
 
-console.log(questions);
+console.log(questions); */
 
 
 app.get("/test", async (request, response) => {
-  response.send(questions);
+  response.send('a');
 });
-
-await client.close();
 
