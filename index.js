@@ -23,6 +23,8 @@ app.get("/test", async (request, response) => {
   response.send('a');
 });
 
-app.get("/test1", async (request, response) => {
-  response.send(questions);
+app.get("/questions", async (request, response) => {
+  if (err) throw err
+
+  response.send(questions)
 });
