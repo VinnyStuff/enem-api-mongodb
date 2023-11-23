@@ -14,8 +14,8 @@ app.listen(PORT, () => {
 
 
 
-/* await client.connect();
-const db = client.db("enem_questions").collection("questions");
+await client.connect();
+/* const db = client.db("enem_questions").collection("questions");
 
 const questions = await db.aggregate([{ $sample: { size: 10 } }]).toArray();
 
