@@ -13,6 +13,9 @@ app.listen(PORT, () => {
   console.log("index working");
 });
 
+const db = client.db("enem_questions").collection("questions");
+
+const questions = await db.aggregate([{ $sample: { size: 10 } }]).toArray();
 
 
 
@@ -20,3 +23,6 @@ app.get("/test", async (request, response) => {
   response.send('a');
 });
 
+app.get("/test1", async (request, response) => {
+  response.send(questions);
+});
