@@ -26,3 +26,5 @@ app.get("/test", async (request, response) => {
   response.send(questions);
 });
 
+await client.close();
+
